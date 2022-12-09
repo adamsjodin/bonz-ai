@@ -18,8 +18,9 @@
             <a href="#">RESTAURANT</a>
             <a href="about.html">ABOUT</a>
             <a href="#">EVENTS</a>
+            <a class="navbar__link" href="checkout.html"><button type="submit" class="navbar__button">BOOK A
+                    ROOM</button></a>
         </ul>
-        <a href="checkout.html"></a><button type="submit" class="navbar__button">BOOK A ROOM</button>
     </nav>
     <header>
         <section class="hero">
@@ -53,11 +54,12 @@
 
 
         <h2>1/4 SELECT PACKAGE</h2>
+        
         <section class="checkout__first-section">
             <article class="checkout">
                 <img class="checkout__img checkout__img-first-section" src="assets/photos/02-day.jpg"
                     alt="Picture of a room">
-                <h3 class="checkout__heading">BEST AVALIBLE</h3>
+                <h3 class="checkout__heading">BEST AVAILABLE</h3>
                 <p class="checkout__paragraph">Excluding breakfast.
                     Free cancellation before 4 PM day of arrival.
                     Complimentary Wi-Fi</p>
@@ -174,8 +176,8 @@
         <h2>4/4 FILL IN CONTRACT</h2>
 
         <article class="form__flex">
-            <section class="form__section">
-                <form class="form__info">
+            <section class="form__flex-section">
+                <form class="form__flex-info">
                     <label for="first-name">FIRST NAME</label>
                     <input type="text" name="name" id="first-name">
                     <label for="last-name">LAST NAME</label>
@@ -191,20 +193,26 @@
                     <label for="city">CITY</label>
                     <input type="text" name="city" id="city">
                 </form>
-                <form class="form__checkbox">
+                <form class="form__flex-checkbox">
                     <input type="checkbox" id="checkbox">
                     <label for="checkbox">I have read the terms & conditions</label>
                 </form>
-                <form class="form__checkbox">
+                <form class="form__flex-checkbox">
                     <input type="checkbox" id="checkbox">
                     <label for="checkbox">Email me about news and special offers</label>
                 </form>
+                <section class="form__confirmation-button">
+                    <a href="confirmation.html"></a><button type="submit"
+                        class="navbar__button confirmation__button confirmation__button-hide-mobile">CONFIRM YOUR
+                        STAY</button>
+                </section>
             </section>
 
             <section class="form__confirmation">
                 <h3 class="checkout__heading">CONFIRMATION SUMMARY</h3>
 
-                <img class="checkout__img checkout__img-big" src="assets/photos/04-day.jpg" alt="Picture of a room">
+                <img class="checkout__img checkout__img-confirmation" src="assets/photos/04-day.jpg"
+                    alt="Picture of a room">
                 <section class="form__confirmation-info">
                     <p>Superior Room</p>
                     <p>2 Adults, 0 Childs</p>
@@ -212,21 +220,23 @@
                     <p>Departing: 23/10/22</p>
                     <p><span>Total amout: 14 475 SEK </span></p>
                 </section>
-                <section class="form__confirmation-button">
-                    <a href="#"></a><button type="submit" class="navbar__button">CONFIRM YOUR STAY</button>
-                </section>
-            </section>
 
+            </section>
+            <section class="form__confirmation-button">
+                <a href="confirmation.html"></a><button type="submit"
+                    class="navbar__button confirmation__button confirmation__button-hide-mobile-desktop">CONFIRM YOUR
+                    STAY</button>
+            </section>
         </article>
 
     </main>
 
 
     <footer>
-        <section class="footer__container">
+        <section class="footer">
             <article class="footer__first-section">
                 <figure class="footer__logo">
-                    <a href="/index.html"><img src="/assets/logo/bonz.ai-logo-black-landscape.png"
+                    <a href="index.html"><img src="assets/logo/bonz.ai-logo-black-landscape.png"
                             alt="bonzai-logo ai-logo-black-landscape"></a>
                 </figure>
                 <p class="footer__paragraph">During the turn of the 19th century,

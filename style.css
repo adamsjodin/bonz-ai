@@ -11,14 +11,26 @@
     box-sizing: border-box;
 }
 
+
+    /* ----GENERAL----  */
+
 body {
     margin: 0;
     font-family: "maven pro";
 }
 
-.navbar {
-    display: none;
+main {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
 
+.navbar, 
+.footer__logos-socials, 
+.confirmation__button-hide-mobile {
+    display: none;
 }
 
 .navbar__button {
@@ -27,12 +39,7 @@ body {
     border: none;
     padding: 0.5rem 1.2rem;
     cursor: pointer;
-}
-
-
-
-.footer__logos-socials {
-    display: none;
+    box-shadow: 0 2px 2px rgba(128, 128, 128, 0.537);
 }
 
 .booking__button-style {
@@ -44,7 +51,7 @@ body {
     cursor: pointer;
 }
 
-/* HERO SECTION*/
+    /* ---HERO / GENERAL---*/
 
 .hero {
     background-image: url(assets/photos/unspash\ background.avif);
@@ -54,7 +61,7 @@ body {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     text-align: center;
     overflow: hidden;
 }
@@ -64,16 +71,7 @@ body {
     margin: 0 auto;
 }
 
-main {
-    max-width: 75rem;
-    margin: 0 auto;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-}
-
-
-/* --- CALENDAR AREA --- */
+    /* --- CALENDAR / GENERAL --- */
 
 .calendar {
     display: grid;
@@ -87,6 +85,7 @@ main {
 .calendar__checkout-img {
     width: 100%;
     margin-left: 0.4rem;
+    box-shadow: 0 2px 2px rgba(128, 128, 128, 0.537);
 }
 
 .calendar__checkin-img {
@@ -104,13 +103,10 @@ main {
     grid-template-columns: 2fr 1fr;
 }
 
-
 .calendar__dropdown-option {
     max-height: 3.6rem;
     padding: 0.5rem;
     margin-left: 0.1rem;
-
-
 }
 
 .calendar__button {
@@ -125,9 +121,10 @@ main {
     color: var(--color-regular-text-button);
     padding: 0.5rem 1rem;
     border: none;
+    box-shadow: 0 2px 2px rgba(128, 128, 128, 0.537);
 }
 
-/* --- INFO CONTAINER STYLING --- */
+    /* --- INFO / INDEX PAGE --- */
 
 .info-container {
     display: flex;
@@ -170,6 +167,7 @@ main {
     margin-bottom: 0.5rem;
     display: flex;
     align-self: center;
+    box-shadow: 0 2px 2px rgba(128, 128, 128, 0.537);
 }
 
 .info__button-load {
@@ -178,73 +176,11 @@ main {
     padding: 0.5rem 1.2rem;
     display: flex;
     align-self: center;
+    box-shadow: 0 2px 2px rgba(128, 128, 128, 0.537);
 }
 
-/* --- FOOTER --- */
 
-footer {
-    background-color: #8A817C;
-    height: 19.75rem;
-}
-
-.footer {
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer__paragraph {
-    display: none;
-}
-
-.footer__logo {
-    display: flex;
-    justify-content: center;
-}
-
-.footer__logo img {
-    width: 11.125rem;
-    margin: 0.5rem
-}
-
-.footer__navs {
-    display: flex;
-    justify-content: space-around;
-}
-
-.footer__about {
-    display: flex;
-    flex-direction: column;
-    color: black;
-    width: 8.063rem;
-}
-
-.footer__contact {
-    display: flex;
-    flex-direction: column;
-    color: black;
-}
-
-.footer__contact, .footer__about, a:link {
-    color: black;
-    text-decoration: none;
-}
-.footer__contact, .footer__about, a:visited {
-    color: black;
-    text-decoration: none;
-}
-
-.footer__contact span {
-    font-weight: 800;
-}
-
-.footer__rights {
-    display: flex;
-    justify-content: center;
-    margin-bottom: auto;        
-    font-weight: 200;
-}
-
-/* ABOUT PAGE  */
+/* --ABOUT PAGE---  */
 
 .about {
     width: 100%;
@@ -280,7 +216,7 @@ footer {
 }
 
 .about__img {
-    height: 13.375rem;
+    height: 13rem;
 }
 
 .about__info-wrapper {
@@ -289,7 +225,7 @@ footer {
     align-items: center;
 }
 
-/* CHECKOUT PAGE */
+/* ---CHECKOUT PAGE - SECTION ONE AND THREE--- */
 
 .checkout__first-section {
     display: flex;
@@ -363,14 +299,16 @@ footer {
     position: relative;
 }
 
-.form__info {
+/* ---CHECKOUT PAGE - SECTION THREE--- */
+
+.form__flex-info {
     display: flex;
     flex-direction: column;
     width: 21.5rem;
 }
 
 .form__confirmation {
-    width: 38.25rem;
+    width: 21.375rem;
 }
 
 .form__confirmation-info {
@@ -383,7 +321,6 @@ footer {
     justify-content: center;
     margin: 1rem 0rem;
 }
-
 .form__confirmation-info p{
     margin: 0;
 }
@@ -391,9 +328,73 @@ footer {
     font-weight: bold;
 }
 
+.confirmation__button {
+    padding: 2rem 3rem;
+    border: 1px solid black;
+}
+
+/* --- FOOTER / GENERAL  --- */
+
+footer {
+    background-color: #8A817C;
+    height: 19.75rem;
+}
+
+.footer__paragraph {
+    display: none;
+}
+
+.footer__logo {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__logo img {
+    width: 11.125rem;
+    margin: 0.5rem
+}
+
+.footer__navs {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__about {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    width: 8.063rem;
+}
+
+.footer__contact {
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.footer__contact, .footer__about, a:link {
+    color: black;
+    text-decoration: none;
+}
+.footer__contact, .footer__about, a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.footer__contact span {
+    font-weight: 800;
+}
+
+.footer__rights {
+    display: flex;
+    justify-content: center;
+    margin-bottom: auto;        
+    font-weight: 200;
+}
+
 @media screen and (min-width: 680px) {
 
-    /* DESKTOP VIEW  */
+    /* ---DESKTOP VIEW---  */
 
     /* ---NAVBAR--- */
 
@@ -403,6 +404,7 @@ footer {
         justify-content: space-around;
         border: 1px solid black;
         padding: 0.5rem 1.2rem;
+        position: relative;
     }
 
     .navbar img {
@@ -413,7 +415,6 @@ footer {
     .navbar ul {
         display: flex;
         flex-wrap: wrap;
-
     }
 
     .navbar ul a {
@@ -429,6 +430,7 @@ footer {
         border: none;
         padding: 0.5rem 1.2rem;
         cursor: pointer;
+        position: block;
     }
 
     /* ---HERO---  */
@@ -458,10 +460,92 @@ footer {
         grid-gap: 1rem;
         grid-template-columns: repeat(3, 1fr);
     }
+
+    /* ABOUT PAGE  */
+
+    .about__info-big, .about__info-small  {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .about__img-big {
+        width: 35rem;
+        height: 21.625rem;
+    }
+
+    /* ---CHECKOUT PAGE--- */
+
+    .checkout__first-section {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .checkout__img-first-section {
+        width: 22rem;
+        gap: 1rem;
+    }
+
+    .checkout__img-big {
+        height: 23.563rem;
+        width: 40.5rem;
+    }
+
+    .checkout__img-small {
+        height: 10.2rem;
+        width: 24.938rem;
+    }
+
+    .checkout__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .checkout__wrapper-flex, .form__flex {
+        display: flex;
+        gap: 1rem;
+    }
+    .checkout__wrapper-small  {
+        margin-top: -3.71rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    /* ----FORM SECTION---  */
+
+    .form__confirmation {
+        margin-top: -3.9rem;
+        width: 45rem;
+    }
+
+    .form__confirmation-button {
+        margin-top: 3rem;
+    }
+
+    .confirmation__button {
+        padding: 2rem 3rem;
+        border: 1px solid black;
+    }
+
+    .checkout__img-confirmation {
+        width: 45rem;
+    }
+
+    .confirmation__button-hide-mobile-desktop {
+        display: none;
+    }
+    .confirmation__button-hide-mobile {
+        display: block;
+    }
     
     /* ---FOOTER--- */
 
-    .footer__container {
+    .footer {
         display: flex;
         justify-content: space-around;
     }
@@ -497,67 +581,5 @@ footer {
         justify-content: flex-end;
         padding: 0.2rem;
     }
-
-    /* ABOUT PAGE  */
-
-    .about__info-big, .about__info-small  {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-
-    .about__img-big {
-        min-width: 38.125rem;
-        min-height: 21.625rem;
-    }
-
-    /* ---CHECKOUT PAGE--- */
-
-    .checkout__first-section {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-
-    .checkout__img-big {
-        height: 23.563rem;
-        width: 45rem;
-    }
-
-    .checkout__img-small {
-        height: 10.2rem;
-        width: 24.938rem;
-    }
-
-    .checkout__wrapper {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .checkout__wrapper-flex {
-        display: flex;
-        gap: 1rem;
-    }
-    .checkout__wrapper-small {
-        margin-top: -3.71rem;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-
-    /* ----FORM SECTION---  */
-
-    .form__flex {
-        display: flex;
-        gap: 2rem;
-    }
-
-    .form__confirmation {
-        margin-top: -3.7rem;
-    }
-
 
 }
