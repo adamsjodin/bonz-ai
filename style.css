@@ -2,10 +2,8 @@
 
 :root {
     --color-confirmation-button: #D8947F;
-
     --color-regular-button: rgb(10, 10, 10);
     --color-regular-text-button: rgb(246, 246, 246);
-
     --color-info-button-background: #ffffff;
 }
 
@@ -16,7 +14,34 @@
 body {
     margin: 0;
     font-family: "maven pro";
-    width: 100vw;
+}
+
+.navbar {
+    display: none;
+
+}
+
+.navbar__button {
+    background-color: var(--color-confirmation-button);
+    color: var(--color-regular-text-button);
+    border: none;
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+}
+
+
+
+.footer__logos-socials {
+    display: none;
+}
+
+.booking__button-style {
+    width: 11.875rem;
+    height: 3.438rem;
+    color: var(--color-regular-text-button);
+    background-color: var(--color-confirmation-button);
+    border: none;
+    cursor: pointer;
 }
 
 /* HERO SECTION*/
@@ -26,106 +51,149 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
+    height: 50vh;
+    text-align: center;
+    overflow: hidden;
 }
 
 .hero__logo {
-    width: 100%;
+    width: 50%;
+    margin: 0 auto;
 }
 
-/* CALENDAR SECTION  */
+main {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* --- CALENDAR AREA --- */
 
 .calendar {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    display: flex;
-    justify-content: space-around;
-    margin-top: 0.5rem;
-    gap: 1px;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas: "checkin checkout" "dropdowns dropdowns" "check-button check-button";
 }
 
-.footer__paragraph {
- display: none;
+.calendar__checkin-img,
+.calendar__checkout-img {
+    width: 100%;
+    margin-left: 0.4rem;
+}
+
+.calendar__checkin-img {
+    grid-area: checkin;
+}
+
+.calendar__checkout-img {
+    grid-area: checkout;
 }
 
 .calendar__dropdown {
+    grid-area: dropdowns;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    margin-top: 0.5rem;
-    gap: 1px;
-    appearance: none;
+    grid-gap: 1rem;
+    grid-template-columns: 2fr 1fr;
 }
 
+
 .calendar__dropdown-option {
+    max-height: 3.6rem;
     padding: 0.5rem;
-    display: flex;
-    text-align: center;
-    cursor: pointer;
+    margin-left: 0.1rem;
+
+
 }
 
 .calendar__button {
+    grid-area: check-button;
     display: flex;
     justify-content: center;
+    max-height: 3.6rem;
 }
 
 .calendar__button-style {
-    background-color: var(--color-regular-button) ;
+    background-color: var(--color-regular-button);
     color: var(--color-regular-text-button);
     padding: 0.5rem 1rem;
     border: none;
-    margin: 0.5rem 0;
 }
 
-/* MAIN SECTION */
+/* --- INFO CONTAINER STYLING --- */
 
-.info {
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    position: relative;
+    color: white;
+    min-height: 16rem;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
+    width: 100%;
+    justify-content: space-between;
+    margin: 2rem 0;
 }
 
-.info__rooms {
+.info-container__rooms {
     background-image: url(/assets/photos/04-day.jpg);
-    color: white;
-}
-.info__restaurant {
-    background-image: url(/assets/photos/04-day.jpg);
-    color: white;
-}
-.info__events {
-    background-image: url(/assets/photos/04-day.jpg);
-    color: white;
 }
 
-
-.info img {
-    width: 23.938rem;
-    height: 16.875rem;
+.info-container__restaurant {
+    background-image: url(/assets/photos/restaurant.avif);
 }
 
-.info__button {
+.info-container__events {
+    background-image: url(/assets/photos/event.avif);
+}
+
+.info-card__button {
+    position: absolute;
+    bottom: -22px;
     background-color: var(--color-info-button-background);
     border: 1px solid black;
     padding: 0.5rem 1.2rem;
     margin-top: -1.5rem;
     margin-bottom: 0.5rem;
-    z-index: 1;
+    display: flex;
+    align-self: center;
 }
 
 .info__button-load {
     background-color: var(--color-info-button-background);
     border: 1px solid black;
     padding: 0.5rem 1.2rem;
-    margin: 0.5rem;
+    display: flex;
+    align-self: center;
 }
 
-/* FOOTER  */
-
+/* --- FOOTER --- */
 
 footer {
     background-color: #8A817C;
     height: 19.75rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__paragraph {
+    display: none;
 }
 
 .footer__logo {
@@ -143,60 +211,255 @@ footer {
     justify-content: space-around;
 }
 
-.footer__about ul li {
-    list-style: none;
-}
-
-.footer__contact  {
+.footer__about {
     display: flex;
     flex-direction: column;
-    margin-top: 1.12rem;
+    color: black;
+    width: 8.063rem;
+}
+
+.footer__contact {
+    display: flex;
+    flex-direction: column;
     color: black;
 }
 
-.footer__contact a:link {
+.footer__contact, .footer__about, a:link {
+    color: black;
+    text-decoration: none;
+}
+.footer__contact, .footer__about, a:visited {
     color: black;
     text-decoration: none;
 }
 
+.footer__contact span {
+    font-weight: 800;
+}
+
+.footer__rights {
+    display: flex;
+    justify-content: center;
+    margin-bottom: auto;        
+    font-weight: 200;
+}
+
+/* ABOUT PAGE  */
+
+.about {
+    width: 100%;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.about__heading {
+    font-size: 2rem;
+    font-weight: 200;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.about__paragraph {
+    line-height: 1.2rem;
+    padding: 0rem 0.5rem;
+    margin: 0.5rem;
+    text-align: center;
+}
+
+.about__button {
+    padding: 0.5rem 1.2rem;
+    border: 1px solid #000000;
+    font-size: 1rem;
+    background-color: white;
+    width: 11.875rem;
+    margin: 1rem;
+    box-shadow: 0 2px 2px rgba(128, 128, 128, 0.537);
+    cursor: pointer;
+}
+
+.about__img {
+    height: 13.375rem;
+}
+
+.about__info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CHECKOUT PAGE */
+
+.checkout__first-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.checkout {
+    margin: 0;
+    width: 21.375rem;
+    margin-bottom: 1rem;
+}
+
+.checkout__img {
+    width: 21.375rem;
+    height: 60%;
+}
+
+.checkout__info-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout__info-wrapper a, .checkout__wrapper a  {
+    text-decoration: underline;
+}
+
+.checkout__button {
+    background-color: var(--color-regular-button);
+    color: var(--color-regular-text-button);
+    border: none;
+    margin-top: 0.24rem;
+}
+
+.checkout__border {
+    border-bottom: 3px solid black;
+    min-width: 100%;
+}
+
+/* ---CHECKOUT PAGE - SECTION TWO--- */
+
+.checkout__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.checkout__wrapper p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.checkout__wrapper span {
+    font-weight: bold;
+}
+
+.checkout__button-style {
+    width: 7.25rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    position: relative;
+}
+
+.checkout__heading-superior--upgrade {
+    margin-top: -2.8rem;
+    color: var(--color-regular-text-button);
+    font-weight: 200;
+    padding: 0.2rem 0;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    position: relative;
+}
+
+.form__info {
+    display: flex;
+    flex-direction: column;
+    width: 21.5rem;
+}
+
+.form__confirmation {
+    width: 38.25rem;
+}
+
+.form__confirmation-info {
+    border: 1px solid black;
+    padding: 0.4rem;
+}
+
+.form__confirmation-button {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0rem;
+}
+
+.form__confirmation-info p{
+    margin: 0;
+}
+.form__confirmation-info span{
+    font-weight: bold;
+}
+
 @media screen and (min-width: 680px) {
 
- 
+    /* DESKTOP VIEW  */
+
+    /* ---NAVBAR--- */
+
+    .navbar {
+        display: block;
+        display: flex;
+        justify-content: space-around;
+        border: 1px solid black;
+        padding: 0.5rem 1.2rem;
+    }
+
+    .navbar img {
+        height: 2.875rem;
+        cursor: pointer;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .navbar ul a {
+        display: flex;
+        justify-content: space-between;
+        margin: auto 2rem;
+        cursor: pointer;
+    }
+
+    .navbar__button {
+        background-color: var(--color-confirmation-button);
+        color: var(--color-regular-text-button);
+        border: none;
+        padding: 0.5rem 1.2rem;
+        cursor: pointer;
+    }
+
+    /* ---HERO---  */
+
+    .hero__logo {
+        width: 30%;
+        margin: 0 auto;
+    }
+
     .calendar {
         display: grid;
+        grid-gap: 1rem;
         grid-template-columns: 1fr 1fr 3fr 1fr;
+        grid-template-columns: auto;
+        grid-template-areas: "checkin checkout dropdowns check-button";
     }
     .calendar__dropdown {
-        display: flex;
-    }
-
-    .calendar__checkin {
         display: grid;
-        grid-column: 1;
+        grid-gap: 1rem;
+        grid-template-columns: 2fr 1fr;
     }
-    .calendar__checkout {
+    .calendar__dropdown-option {
+        max-height: 3.6rem;
+    }
+    .info-container {
         display: grid;
-        grid-column: 2;
-    }
-    .calendar__dropdown-option-guest {
-        display: flex;
-        flex: 2;
-    }
-    .calendar__dropdown-option-room {
-        display: flex;
-        flex: 1;
-    }
-
-    .info {
-        display: grid;
+        grid-gap: 1rem;
         grid-template-columns: repeat(3, 1fr);
     }
-
-    .info__rooms {
-
-    }
-
-    /* FOOTER  */
+    
+    /* ---FOOTER--- */
 
     .footer__container {
         display: flex;
@@ -209,21 +472,91 @@ footer {
         align-items: flex-start;
     }
 
-    .footer__second-section {
-        display: flex;
-        align-items: center;
-    }
-    
     .footer__paragraph {
         display: block;
-        width: 676.58px;
+        max-width: 40rem;
     }
 
-    .footer__rights {
+    .footer__second-section {
         display: flex;
-        justify-content: center;
-        margin-bottom: auto;        
-        font-weight: 200;
+        margin-top: auto;
+    }
+
+    .footer__navs {
+        gap: 2rem;
+    }
+
+    .footer__logos-socials {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -1.5rem;
+        margin-right: 7rem;
+    }
+    .footer__logos-socials img {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0.2rem;
+    }
+
+    /* ABOUT PAGE  */
+
+    .about__info-big, .about__info-small  {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .about__img-big {
+        min-width: 38.125rem;
+        min-height: 21.625rem;
+    }
+
+    /* ---CHECKOUT PAGE--- */
+
+    .checkout__first-section {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .checkout__img-big {
+        height: 23.563rem;
+        width: 45rem;
+    }
+
+    .checkout__img-small {
+        height: 10.2rem;
+        width: 24.938rem;
+    }
+
+    .checkout__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .checkout__wrapper-flex {
+        display: flex;
+        gap: 1rem;
+    }
+    .checkout__wrapper-small {
+        margin-top: -3.71rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    /* ----FORM SECTION---  */
+
+    .form__flex {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .form__confirmation {
+        margin-top: -3.7rem;
     }
 
 

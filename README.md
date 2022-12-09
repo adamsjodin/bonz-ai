@@ -226,3 +226,13 @@ header {
 
         <img src="/assets/photos/CHECKIN.jpg" alt="CHECKIN">
         <img src="/assets/photos/CHECKOUT.jpg" alt="CHECKOUT">
+
+
+.footer__contact, .footer__about, a:link {
+    color: black;
+    text-decoration: none;
+}
+
+.footer__contact span {
+    font-weight: 800;
+}

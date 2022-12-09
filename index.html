@@ -10,19 +10,30 @@
 </head>
 
 <body>
-    <section class="hero">
-        <img class="hero__logo" src="assets/logo/bonz.ai-logo-black-portrait-full.png" alt="bonzai-logo">
-    </section>
+    <nav class="navbar">
+          <a href="index.html"><img src="/assets/logo/bonz.ai-logo-black-symbol.png" alt="naviagation logo"></a>
+          <ul>
+            <ul>
+                <a href="#">ROOMS</a>
+                <a href="#">RESTAURANT</a>
+                <a href="about.html">ABOUT</a>
+                <a href="#">EVENTS</a>
+            </ul>
+          </ul>
+          <a href="/checkout.html"><button class="navbar__button">BOOK A ROOM</button></a>  
+    </nav>
 
     <article class="wrapper">
         <header>
-
+            <section class="hero">
+                <img class="hero__logo" src="assets/logo/bonz.ai-logo-black-portrait-full.png" alt="bonzai-logo">
+            </section>
         </header>
 
         <main>
-            <section class="calendar">
-                <img class="calendar__checkin" src="assets/photos/CHECKIN.jpg" alt="CHECKIN">
-                <img class="calendar__checkout" src="assets/photos/CHECKOUT.jpg" alt="CHECKOUT">
+            <article class="calendar">
+                <img class="calendar__checkin-img" src="assets/photos/CHECKIN.jpg" alt="CHECKIN">
+                <img class="calendar__checkout-img" src="assets/photos/CHECKOUT.jpg" alt="CHECKOUT">
                 <section class="calendar__dropdown">
                     <select class="calendar__dropdown-option calendar__dropdown-option-guest" name="guest" id="guest">
                         <option value="">GUESTS</option>
@@ -41,26 +52,24 @@
                 <section class="calendar__button">
                     <button class="calendar__button-style">CHECK AVALIBILITY</button>
                 </section>
-            </section>
-
-            <article class="info">
-                <section class="info info__rooms">
-                    <h2 class="info__heading">ROOMS</h2>
-                    <button class="info__button">MORE INFORMATION</button>
-                </section>
-
-                <section class="info info__restaurant">
-                    <h2 class="info__heading">RESTAURANT</h2>
-                    <button class="info__button">MORE INFORMATION</button>
-                </section>
-
-                <section class="info info__events">
-                    <h2 class="info__heading info__heading-event">EVENTS</h2>
-                    <button class="info__button">MORE INFORMATION</button>
-                </section>
-
             </article>
-            <button class="info__button-load">LOAD MORE...</button>
+            <article class="info-container">
+                <section class="info-container__rooms info-card">
+                    <h2 class="info-card__heading">ROOMS</h2>
+                    <button class="info-card__button">MORE INFORMATION</button>
+                </section>
+
+                <section class="info-container__restaurant info-card">
+                    <h2 class="info-card__heading">RESTAURANT</h2>
+                    <button class="info-card__button">MORE INFORMATION</button>
+                </section>
+
+                <section class="info-container__events info-card">
+                    <h2 class="info-card info-card__heading-event">EVENTS</h2>
+                    <button class="info-card__button">MORE INFORMATION</button>
+                </section>
+            </article>
+            <button class="info__button-load">LOAD MORE..</button>
         </main>
     </article>
 
@@ -68,7 +77,8 @@
         <section class="footer__container">
             <article class="footer__first-section">
                 <figure class="footer__logo">
-                    <img src="/assets/logo/bonz.ai-logo-black-landscape.png" alt="bonzai-logo ai-logo-black-landscape">
+                    <a href="/index.html"><img src="/assets/logo/bonz.ai-logo-black-landscape.png"
+                            alt="bonzai-logo ai-logo-black-landscape"></a>
                 </figure>
                 <p class="footer__paragraph">During the turn of the 19th century,
                     Bergstorg was once the meeting grounds for Stockholms high society and cultural elite. With the
@@ -82,17 +92,15 @@
             <article class="footer__second-section">
                 <section class="footer__navs">
                     <nav class="footer__about">
-                        <ul>
-                            <li>About us</li>
-                            <li>Career</li>
-                            <li>Policies</li>
-                            <li>Terms of use</li>
-                            <li>Cookie policy</li>
-                            <li>Gift card</li>
-                        </ul>
+                        <a href="about.html">About us</a>
+                        <a href="#">Career</a>
+                        <a href="#">Policies</a>
+                        <a href="#">Terms of use</a>
+                        <a href="#">Cookie policy</a>
+                        <a href="#">Gift card</a>
                     </nav>
                     <nav class="footer__contact">
-                        <a href="#">Visit Bonz.ai</a>
+                        <a href="#"><span>Visit bonz.ai</span></a>
                         <a href="#">Bergstorg 4</a>
                         <a href="#">11151 Stockholm</a>
                         <a href="#">+46057882700</a>
@@ -101,6 +109,10 @@
             </article>
         </section>
         <h3 class="footer__rights">© 2022 - All rights reserved</h3>
+        <section class="footer__logos-socials">
+            <img src="/assets/logo/facebook.svg" alt="Faceook logo">
+            <img src="/assets/logo/instagram.svg" alt="Instagram logo">
+        </section>
     </footer>
 </body>
 
