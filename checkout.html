@@ -11,16 +11,16 @@
 
 <body>
     <nav class="navbar">
-        <a href="index.html"><img src="/assets/logo/bonz.ai-logo-black-symbol.png" alt="naviagation logo"></a>
+        <a class="navbar-logo" href="index.html"><img src="/assets/logo/bonz.ai-logo-black-symbol.png" alt="naviagation logo"></a>
         <ul>
             <a href="#">ROOMS</a>
             <a href="#">RESTAURANT</a>
             <a href="#">RESTAURANT</a>
             <a href="about.html">ABOUT</a>
             <a href="#">EVENTS</a>
-            <a class="navbar__link" href="checkout.html"><button type="submit" class="navbar__button">BOOK A
-                    ROOM</button></a>
         </ul>
+        <a class="navbar-logo" class="navbar__link" href="checkout.html"><button type="submit" class="navbar__button">BOOK A ROOM</button></a>
+
     </nav>
     <header>
         <section class="hero">
@@ -52,12 +52,11 @@
             </section>
         </article>
 
-
         <h2>1/4 SELECT PACKAGE</h2>
-        
+
         <section class="checkout__first-section">
             <article class="checkout">
-                <img class="checkout__img checkout__img-first-section" src="assets/photos/02-day.jpg"
+                <img class="checkout__img" src="assets/photos/02-day.jpg"
                     alt="Picture of a room">
                 <h3 class="checkout__heading">BEST AVAILABLE</h3>
                 <p class="checkout__paragraph">Excluding breakfast.
@@ -69,7 +68,7 @@
                 </section>
             </article>
             <article class="checkout">
-                <img class="checkout__img checkout__img-first-section" src="assets/photos/fusion dinner.avif"
+                <img class="checkout__img" src="assets/photos/fusion dinner.avif"
                     alt="Picture of a room">
                 <h3 class="checkout__heading">FUSION DINNER PACKAGE</h3>
                 <p class="checkout__paragraph">Accommodation, free breakfast and a 3-course dinner excluding beverages
@@ -80,7 +79,7 @@
                 </section>
             </article>
             <article class="checkout">
-                <img class="checkout__img checkout__img-first-section" src="assets/photos/coffee_v2.avif"
+                <img class="checkout__img" src="assets/photos/coffee_v2.avif"
                     alt="Picture of a room">
                 <h3 class="checkout__heading">BED & BREAKFAST</h3>
                 <p class="checkout__paragraph">Start your day with our breakfast and a stunning view over mount Figma
@@ -91,15 +90,16 @@
                 </section>
             </article>
         </section>
+
         <div class="checkout__border"></div>
 
         <h2>2/4 CUSTOMIZE YOUR ROOM</h2>
 
-        <article class="checkout checkout__wrapper">
             <section class="checkout__wrapper-flex">
                 <aside class="checkout__wrapper-big">
                     <img class="checkout__img checkout__img-big" src="assets/photos/04-day.jpg" alt="Picture of a room">
                     <h3 class="checkout__heading checkout__heading-superior--upgrade">SUPERIOR ROOM</h3>
+                    <article class="checkout__big-info">
                     <p class="checkout__paragraph">24 sqm perfectly proportioned living space
                         Featuring high-end amenities and furnishings
                         Queen-size bed (160cm wide)
@@ -111,26 +111,32 @@
                     <section class="checkout__button-flex">
                         <button class="checkout__button checkout__button-style">CONTINUE</button>
                     </section>
+                </article>
                 </aside>
+                <h3 class="checkout__heading">UPGRADE YOUR ROOM:</h3>
+
                 <aside class="checkout__wrapper-small">
-                    <h3 class="checkout__heading">UPGRADE YOUR ROOM:</h3>
+                    <article class="checkout__upgrade-deluxe">
                     <img class="checkout__img checkout__img-small" src="assets/photos/08-day.jpg"
                         alt="Picture of a room">
                     <h3 class="checkout__heading-superior checkout__heading-superior--upgrade">DELUXE ROOM + 285 SEK
                     </h3>
-                    <section>
+                    <section class="checkout__button-flex">
                         <button class="checkout__button checkout__button-style">CONTINUE</button>
                     </section>
+                    </article>
+                    <article>
                     <img class="checkout__img checkout__img-small" src="assets/photos/05-day.jpg"
                         alt="Picture of a room">
                     <h3 class="checkout__heading-superior checkout__heading-superior--upgrade">JUNIOR SUITE + 500 SEK
                     </h3>
-                    <section>
+                    <section class="checkout__button-flex">
                         <button class="checkout__button checkout__button-style">CONTINUE</button>
                     </section>
+                    </article>
                 </aside>
             </section>
-        </article>
+
         <div class="checkout__border"></div>
 
         <h2>3/4 CUSTOMIZE YOUR STAY</h2>
@@ -148,6 +154,7 @@
                     <button class="checkout__button">SELECT</button>
                 </section>
             </article>
+
             <article class="checkout">
                 <img class="checkout__img checkout__img-first-section" src="assets/photos/CAVA_V2.avif"
                     alt="Picture of a room">
